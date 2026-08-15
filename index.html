@@ -4,52 +4,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Arthur</title>
+
+    <title>Portfólio | Arthur Peres</title>
 
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             background-color: #0f172a;
-            color: white;
+            color: #f8fafc;
             font-family: Arial, Helvetica, sans-serif;
-            text-align: center;
             margin: 0;
             padding: 0;
         }
 
         header {
             background-color: #1e293b;
-            padding: 40px;
+            text-align: center;
+            padding: 70px 20px;
         }
 
-        h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
+        header h1 {
+            font-size: 42px;
+            margin: 0 0 12px;
+        }
+
+        header h2 {
+            font-size: 20px;
+            font-weight: normal;
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        header p {
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        nav {
+            margin-top: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section {
+            margin-bottom: 70px;
+        }
+
+        h2 {
+            font-size: 30px;
+            border-bottom: 2px solid #334155;
+            padding-bottom: 10px;
         }
 
         p {
-            font-size: 18px;
-            width: 70%;
-            margin: auto;
-            line-height: 1.6;
+            font-size: 17px;
+            line-height: 1.7;
+            color: #e2e8f0;
         }
 
-        .container {
-            margin-top: 40px;
+        .projetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
-        img {
-            width: 700px;
-            max-width: 90%;
+        .card {
+            background-color: #1e293b;
+            border-radius: 12px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            font-size: 22px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+        .botao {
+            display: inline-block;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 11px 18px;
+            border-radius: 7px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .botao:hover {
+            background-color: #1d4ed8;
+        }
+
+        .habilidades {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .habilidades span {
+            background-color: #1e293b;
+            padding: 10px 15px;
+            border-radius: 7px;
+        }
+
+        .galeria {
+            text-align: center;
+        }
+
+        .galeria img {
+            width: 800px;
+            max-width: 100%;
             border-radius: 10px;
-            margin-top: 20px;
-            box-shadow: 0px 0px 15px black;
+            margin: 20px 0;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        .contato a {
+            color: #38bdf8;
+            text-decoration: none;
+            margin-right: 20px;
         }
 
         footer {
-            margin-top: 50px;
-            padding: 20px;
+            text-align: center;
             background-color: #1e293b;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 34px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px;
+            }
+
         }
 
     </style>
@@ -57,46 +185,201 @@
 
 <body>
 
-    <header>
+<header>
 
-        <h1>Arthur Peres</h1>
+    <h1>Arthur Peres</h1>
+
+    <h2>Estudante de Engenharia de Software | ServiceNow | Desenvolvimento de Aplicações</h2>
+
+    <p>
+        Estudante de Engenharia de Software interessado em desenvolvimento,
+        sistemas e tecnologias corporativas. Este portfólio reúne projetos
+        acadêmicos e práticos desenvolvidos durante minha formação e meus
+        estudos em tecnologia.
+    </p>
+
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Conhecimentos</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section id="sobre">
+
+        <h2>Sobre mim</h2>
 
         <p>
-            Olá! Meu nome é Arthur Peres e estou iniciando minha trajetória
-            na área de tecnologia e desenvolvimento. Este site foi criado
-            para apresentar meus projetos, experiências acadêmicas e meu
-            portfólio pessoal.
+            Atualmente curso Engenharia de Software e venho desenvolvendo
+            projetos para aplicar na prática conceitos de desenvolvimento,
+            estruturação de dados, banco de dados, lógica de programação
+            e automação de processos.
         </p>
 
-    </header>
+        <p>
+            Também estudo a plataforma ServiceNow, utilizando recursos como
+            App Engine Studio e Flow Designer para criação e configuração
+            de aplicações.
+        </p>
 
-    <div class="container">
+    </section>
 
-    <h2>Meu Portfólio</h2>
 
-    <img src="foto1.svg">
+    <section id="projetos">
 
-    <img src="foto2.svg">
+        <h2>Projetos em destaque</h2>
 
-    <img src="foto3.svg">
+        <div class="projetos">
 
-    <img src="foto4.svg">
+            <div class="card">
 
-    <img src="foto5.svg">
+                <h3>🐾 AU FOOD</h3>
 
-    <h2>Meu Currículo</h2>
+                <p>
+                    Aplicação desenvolvida no ServiceNow App Engine Studio
+                    para gerenciamento de produtos, estoque e pedidos.
+                    O projeto inclui relacionamento entre tabelas,
+                    controle de acesso, importação de dados e automação
+                    do processo de aprovação de pedidos.
+                </p>
 
-    <img src="foto6.png">
+                <a
+                    class="botao"
+                    href="https://github.com/arthur-peres-souza/au-food-servicenow"
+                    target="_blank">
+                    Ver projeto
+                </a>
 
-    <img src="foto7.png">
+            </div>
 
-</div>
 
-    <footer>
+            <div class="card">
 
-        <p>© 2026 - Portfólio Arthur Peres</p>
+                <h3>🔐 Escape Room C++</h3>
 
-    </footer>
+                <p>
+                    Projeto acadêmico desenvolvido em C++ com desafios de
+                    lógica baseados em uma experiência de sala de fuga,
+                    criado durante os estudos de lógica de programação.
+                </p>
+
+                <a
+                    class="botao"
+                    href="https://github.com/arthur-peres-souza/escape-room-cpp"
+                    target="_blank">
+                    Ver projeto
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>🌐 Portfólio Web</h3>
+
+                <p>
+                    Site desenvolvido em HTML e CSS para reunir projetos,
+                    conhecimentos e experiências acadêmicas em um único
+                    ambiente online.
+                </p>
+
+                <a
+                    class="botao"
+                    href="https://github.com/arthur-peres-souza/Github-pages"
+                    target="_blank">
+                    Ver código
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="habilidades">
+
+        <h2>Tecnologias e conhecimentos</h2>
+
+        <div class="habilidades">
+
+            <span>ServiceNow</span>
+            <span>App Engine Studio</span>
+            <span>Flow Designer</span>
+            <span>Git</span>
+            <span>GitHub</span>
+            <span>HTML</span>
+            <span>C++</span>
+            <span>Banco de Dados</span>
+            <span>Estruturação de Dados</span>
+            <span>Relacionamentos entre Tabelas</span>
+
+        </div>
+
+    </section>
+
+
+    <section id="portfolio" class="galeria">
+
+        <h2>Portfólio</h2>
+
+        <p>
+            Algumas imagens relacionadas aos meus projetos,
+            atividades acadêmicas e desenvolvimento profissional.
+        </p>
+
+        <img src="foto1.svg" alt="Portfólio Arthur Peres">
+        <img src="foto2.svg" alt="Projeto Arthur Peres">
+        <img src="foto3.svg" alt="Projeto acadêmico">
+        <img src="foto4.svg" alt="Projeto de tecnologia">
+        <img src="foto5.svg" alt="Experiência acadêmica">
+
+    </section>
+
+
+    <section class="galeria">
+
+        <h2>Currículo</h2>
+
+        <img src="foto6.png" alt="Currículo Arthur Peres">
+        <img src="foto7.png" alt="Currículo Arthur Peres">
+
+    </section>
+
+
+    <section id="contato" class="contato">
+
+        <h2>Contato</h2>
+
+        <p>
+            Você pode conhecer mais sobre meus projetos e acompanhar
+            meu desenvolvimento profissional pelos links abaixo.
+        </p>
+
+        <a
+            href="https://github.com/arthur-peres-souza"
+            target="_blank">
+            GitHub
+        </a>
+
+        <!-- Depois colocamos seu LinkedIn aqui -->
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 Arthur Peres | Portfólio de Engenharia de Software</p>
+
+</footer>
 
 </body>
 
